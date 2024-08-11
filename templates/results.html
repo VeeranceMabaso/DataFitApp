@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Results</h2>
+{% if equation %}
+    <p>Best Predicted Expression: {{ equation }}</p>
+    <p>R-Squared (R²): {{ score }}</p>
+
+    {% if time_taken %}
+        <p>Time Taken: {{ time_taken }} seconds</p>
+    {% endif %}
+
+{% else %}
+    <p>There was an error processing your request. Please check your data and try again.</p>
+{% endif %}
+{% endblock %}

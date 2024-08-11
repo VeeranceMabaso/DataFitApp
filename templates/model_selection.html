@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Model Selection</h2>
+<form action="{{ url_for('model_selection') }}" method="post">
+    <label for="model">Select Model:</label>
+    <select id="model" name="model">
+        <option value="gp">Genetic Programming</option>
+        <option value="gep">Gene Expression Programming</option>
+    </select>
+    <!-- <br>
+    <label for="param">Number of Generations:</label>
+    <input type="range" id="param" name="param" min="10" max="100" step="10" value="50">
+    <span id="param-value">50</span>
+    <br> -->
+    <button type="submit">Run</button>
+</form>
+
+<!-- <script>
+    const paramInput = document.getElementById('param');
+    const paramValue = document.getElementById('param-value');
+
+    paramInput.addEventListener('input', function() {
+        paramValue.textContent = paramInput.value;
+    });
+</script> -->
+{% endblock %}
