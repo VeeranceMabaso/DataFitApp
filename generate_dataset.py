@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 x0 = np.arange(-1, 1.1, 0.1)
 x1 = np.arange(-1, 1.1, 0.1)
 x0, x1 = np.meshgrid(x0, x1)
-y_truth = x0**2 - x1**2 + x1 - 3
+y_truth = x0**2 - x1**2 + x1 - 1
 
 # Flatten the arrays for DataFrame
 x0_flat = x0.flatten()

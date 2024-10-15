@@ -1,0 +1,11 @@
+// Symbolic Regression Tree
+digraph {
+	0 [label="add(mul(X0,"]
+	1 [label="X0),"]
+	2 [label="sub(add(sub(X1,"]
+	3 [label="0.001),"]
+	4 [label="-0.989),"]
+	5 [label="mul(X1,"]
+	6 [label="X1)))"]
+	0 -> 1 [label=root]
+}

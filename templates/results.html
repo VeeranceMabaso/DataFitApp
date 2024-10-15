@@ -2,15 +2,17 @@
 
 {% block content %}
 <h2>Results</h2>
-{% if equation %}
-    <p>Best Predicted Expression: {{ equation }}</p>
-    <p>R-Squared (R²): {{ score }}</p>
 
-    {% if time_taken %}
-        <p>Time Taken: {{ time_taken }} seconds</p>
-    {% endif %}
-
-{% else %}
-    <p>There was an error processing your request. Please check your data and try again.</p>
+{% if gep_equation %}
+   <p>GEP-Generated Mathematical Expression: {{ gep_equation }}</p>
+{% elif equation %}
+   <p>GP-Generated Mathematical Expression: {{ equation }}</p>
 {% endif %}
+
+<p>R-Squared (R²): {{ score }}</p>
+
+{% if time_taken %}
+    <p>Time Taken: {{ time_taken }} seconds</p>
+{% endif %}
+
 {% endblock %}
